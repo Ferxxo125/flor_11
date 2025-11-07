@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="encanta">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Flor Amarilla para ti</title>
     <style>
       * {
@@ -12,7 +12,7 @@
       }
 
       :root {
-        --color-bg: linear-gradient(to top, #2b3cf1, #000);
+        --color-bg: linear-gradient(to top, #02101f, #000000);
         --line-color: linear-gradient(
           to left top,
           #23b525 20%,
@@ -20,8 +20,8 @@
           #09711c
         );
         --flower-center: radial-gradient(circle, #000, #ff5e00);
-        --leaf-color: radial-gradient(circle, #047c36, #104e1c);
-        --petal-color: radial-gradient(circle, #ff5e00, #ffbb00);
+        --leaf-color: radial-gradient(circle, #047c36, #0b651d);
+        --petal-color: radial-gradient(circle, #ff2600, #d4ff00);
       }
 
       body {
@@ -31,6 +31,7 @@
         align-items: flex-end;
         justify-content: center;
         overflow: hidden;
+
       }
 
       h1 {
@@ -40,8 +41,8 @@
         width: 100%;
         color: #fff;
         font-family: "Poppins", sans-serif;
-        font-weight: 300;
-        font-size: 28px;
+        font-weight: 400;
+        font-size: 18px;
       }
 
       .flower_wrapper {
@@ -64,8 +65,8 @@
         top: -93px;
         left: 50%;
         transform: translateX(-50%);
-        width: 150px;
-        height: 150px;
+        width: 140px;
+        height: 140px;
         border-radius: 50%;
         background: var(--flower-center);
         z-index: 5;
@@ -139,7 +140,7 @@
       .flower_leaf {
         position: absolute;
         width: 70px;
-        height: 120px;
+        height: 100px;
         background: var(--leaf-color);
         border-radius: 100px 20px 100px 20px;
         transform-origin: center bottom;
@@ -187,7 +188,7 @@
         position: absolute;
         width: 10px;
         height: 10px;
-        background-color: rgb(255, 251, 0);
+        background-color: rgb(255, 255, 0);
         border-radius: 50%;
         filter: blur(2px);
         z-index: 1;
@@ -251,7 +252,7 @@
         bottom: 0px;
         width: 10px;
         height: 10px;
-        background-color: rgb(238, 235, 68);
+        background-color: rgb(238, 85, 68);
         border-radius: 50%;
         filter: blur(2px);
         animation: light-ans-background 7s linear infinite backwards;
@@ -359,7 +360,7 @@
         font-family: "Poppins", sans-serif;
         font-weight: 600;
         color: #fff;
-        background: linear-gradient(45deg, #000211, #3e16c2);
+        background: linear-gradient(45deg, #000211, #0f0ca1);
         border: none;
         border-radius: 50px;
         cursor: pointer;
@@ -373,9 +374,38 @@
 
       .flower-btn:hover {
         transform: translateY(-3px);
-        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.964);
+        box-shadow: 0 12px 20px rgba(248, 249, 248, 0.964);
       }
 
+    /* === ADAPTACIÓN RESPONSIVA === */
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 18px;
+          width: 100%;
+        }
+        .flower_wrapper {
+          width: -50vmin;
+          max-width: 180px;
+        }
+        .flower-btn {
+          font-size: 16px;
+          padding: 10px 20px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 16px;
+        }
+        .flower_wrapper {
+          width: 55vmin;
+          max-width: 150px;
+        }
+        .flower-btn {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -383,7 +413,10 @@
       id="id_audio"
       src="Chris Lebron - Desde Mis Ojos.mp3"
     ></audio>
-    <h1>Mi Reina 👸🧞‍♀️solo quiero decirte que me encanta pasar tiempo contigo, de verdad, cada momento a tu lado es único y especial, y me haces sentir increíble. También quiero pedirte perdón si en algo te hice sentir mal o si no actué como debía. No quiero que estés enojada conmigo, porque lo último que quiero es perder tu sonrisa. Eres única y me encantas más de lo que imaginas. 💫❤️</h1>
+    <h1>Mi Reina👸solo quiero decirte que me encanta pasar tiempo contigo, cada momento a tu lado es único y especial, y me haces sentir increíble. También quiero 
+      pedirte perdón si en algo te hice sentir mal o si no actué como debía. No quiero que estés 
+      enojada conmigo, porque lo último que quiero es perder tu sonrisa. Eres única y me encantas 
+      más de lo que imaginas. 💫❤️</h1>
     <div class="sunflower">
       <div class="flower_wrapper">
         <div class="flower_stem"></div>
@@ -433,7 +466,7 @@
       const audio = document.getElementById("id_audio")
       floweBtn.onclick = () => {
         audio.play()
-        audio.volume = 0.5
+        audio.volume = 0.6
       }
     </script>
   </body>

@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <title>FLOR AMARILLA :)</title>
+    <title>Para ti Reina:)</title>
     
     <style>
       * {
@@ -22,15 +22,15 @@
         height: 100vh;
         justify-content: center;
         align-items: center;
-        background-color: #fce4ec;
+        background-color: #8eabb9;
       }
 
       .container {
         width: 300px;
         text-align: center;
         padding: 20px;
-        background-color: #fff;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        background-color: #fafafb;
+        box-shadow: 0 6px 12px rgba(15, 2, 135, 0.89);
       }
 
       .container h2 {
@@ -53,17 +53,16 @@
       .keypad button {
         padding: 15px;
         font-size: 25px;
-        background-color: #f8bbd0;
-        border: 1px black solid;
+        background-color: #6a8ac2;
+        border: 1px rgb(11, 11, 11) solid;
         outline: none;
         cursor: pointer;
         transition: background 0.2s;
       }
 
       .key:hover {
-        background-color: #f48fb1;
+        background-color: #e21414;
       }
-
       .keypad button:last-child {
         grid-column: 2/3;
       }
@@ -76,6 +75,7 @@
         🔒<br />
         Ingrese la contraseña
       </h2>
+      <h6> dd/mm </h6>
       <div class="input-display" id="inputDisplay">••••</div>
       <div class="keypad">
         <button class="key" onclick="enterDigit('1')">1</button>
@@ -92,7 +92,7 @@
     </div>
 
     <script>
-      const correctPassword = "0101";
+      const correctPassword = "0311";
       const display = document.getElementById("inputDisplay");
       let input = "";
       function enterDigit(digit) {

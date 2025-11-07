@@ -1,82 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página protegida - Ingreso mediante contraseña especial 🌻" />
+    <meta name="author" content="Fernando Cabrera" />
+    <title>Para ti, Reina 🌻</title>
+
+    <!-- Fuentes y estilos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <title>Para ti Reina:)</title>
-    
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" 
+      rel="stylesheet"
+    >
+
     <style>
       * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        font-family: sans-serif;
+        font-family: 'Poppins', sans-serif;
       }
 
       body {
         display: flex;
-        width: 100%;
-        height: 100vh;
         justify-content: center;
         align-items: center;
-        background-color: #8eabb9;
+        height: 100vh;
+        width: 100%;
+        background-color: #559abc;
       }
 
       .container {
-        width: 300px;
+        width: 90%;
+        max-width: 320px;
         text-align: center;
         padding: 20px;
         background-color: #fafafb;
-        box-shadow: 0 6px 12px rgba(15, 2, 135, 0.89);
+        border-radius: 10px;
+        box-shadow: 0 6px 12px rgba(9, 2, 67, 0.89);
       }
 
-      .container h2 {
+      h2 {
         font-size: 1.7rem;
+        font-weight: 600;
+        color: #060606;
+      }
+
+      h6 {
+        margin-top: 8px;
+        color: #f10404;
+        font-weight: 400;
       }
 
       .input-display {
-        text-align: center;
-        margin: 0;
+        margin: 12px 0;
         font-size: 30px;
-        margin: 10px 0;
+        letter-spacing: 4px;
       }
 
       .keypad {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
+        margin-top: 10px;
       }
 
       .keypad button {
         padding: 15px;
         font-size: 25px;
-        background-color: #6a8ac2;
-        border: 1px rgb(11, 11, 11) solid;
-        outline: none;
+        background-color: #7c6ac2;
+        border: 1px solid #0b0b0b;
+        border-radius: 8px;
         cursor: pointer;
-        transition: background 0.2s;
+        transition: all 0.2s ease;
+        color: rgb(254, 252, 252);
       }
 
-      .key:hover {
+      .keypad button:hover {
         background-color: #e21414;
       }
+
       .keypad button:last-child {
         grid-column: 2/3;
       }
-
+    
     </style>
   </head>
+
   <body>
-    <div class="container">
-      <h2>
-        🔒<br />
-        Ingrese la contraseña
-      </h2>
-      <h6> dd/mm </h6>
-      <div class="input-display" id="inputDisplay">••••</div>
+    <main class="container">
+      <h2>🧞‍♀️🔒<br>Ingrese la contraseña</h2>
+      <h6>dd/mm</h6>
+
+      <div id="inputDisplay" class="input-display">••••</div>
+
       <div class="keypad">
         <button class="key" onclick="enterDigit('1')">1</button>
         <button class="key" onclick="enterDigit('2')">2</button>
@@ -85,31 +104,36 @@
         <button class="key" onclick="enterDigit('5')">5</button>
         <button class="key" onclick="enterDigit('6')">6</button>
         <button class="key" onclick="enterDigit('7')">7</button>
-        <button class="key" onclick="enterDigit('9')">9</button>
         <button class="key" onclick="enterDigit('8')">8</button>
+        <button class="key" onclick="enterDigit('9')">9</button>
         <button class="key" onclick="enterDigit('0')">0</button>
       </div>
-    </div>
+            <footer>Hecho con ❤️ por Fernando</footer>
+    </main>
 
     <script>
       const correctPassword = "0311";
       const display = document.getElementById("inputDisplay");
       let input = "";
+
       function enterDigit(digit) {
         if (input.length < 4) {
           input += digit;
         }
+
         display.textContent = input.padEnd(4, "•");
+
         if (input.length === 4) {
           if (input === correctPassword) {
-            window.location.href = "flower.html"; 
+            window.location.href = "flower.html";
           } else {
-            alert("Contraseña incorecta, intenta de nuevo");
+            alert("Contraseña incorrecta, intenta de nuevo 💛");
             input = "";
             display.textContent = "••••";
           }
-        }
+      } 
       }
     </script>
   </body>
 </html>
+

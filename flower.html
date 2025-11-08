@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flor Amarilla para ti</title>
+    <title>Para tí Reina ❤️</title>
     <style>
       * {
         padding: 0;
@@ -150,7 +150,176 @@
           opacity: 1;
         }
       }
+      .flower_light,
+      .light {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: rgb(255, 251, 0);
+        border-radius: 50%;
+        filter: blur(2px);
+        z-index: 1;
+      }
 
+      .flower_light {
+        bottom: 450px;
+        animation: light-ans 4s linear infinite backwards;
+      }
+
+      .light-1 {
+        left: 5%;
+        animation-delay: 1s;
+      }
+      .light-2 {
+        left: 15%;
+        animation-delay: 0.5s;
+      }
+      .light-3 {
+        left: 25%;
+        animation-delay: 0.3s;
+      }
+      .light-4 {
+        left: 35%;
+        animation-delay: 0.9s;
+      }
+      .light-5 {
+        left: 45%;
+        animation-delay: 1.5s;
+      }
+      .light-6 {
+        left: 55%;
+        animation-delay: 3s;
+      }
+      .light-7 {
+        left: 65%;
+        animation-delay: 2s;
+      }
+      .light-8 {
+        left: 75%;
+        animation-delay: 3.5s;
+      }
+      .light-9 {
+        left: 85%;
+        animation-delay: 2s;
+      }
+      .light-10 {
+        left: 92%;
+        animation-delay: 3.5s;
+      }
+      .light-11 {
+        left: 95%;
+        animation-delay: 3s;
+      }
+      .light-12 {
+        left: 98%;
+        animation-delay: 0.5s;
+      }
+      .light {
+        position: absolute;
+        bottom: 0px;
+        width: 10px;
+        height: 10px;
+        background-color: rgb(238, 235, 68);
+        border-radius: 50%;
+        filter: blur(2px);
+        animation: light-ans-background 7s linear infinite backwards;
+        z-index: 1; /* confettis detrás de la flor */
+      }
+
+      .light-1 {
+        left: 100px;
+        animation-delay: 1s;
+      }
+      .light-2 {
+        left: 200px;
+        animation-delay: 0.5s;
+      }
+      .light-3 {
+        left: 600px;
+        animation-delay: 0.3s;
+      }
+      .light-4 {
+        left: 800px;
+        animation-delay: 0.9s;
+      }
+      .light-5 {
+        left: 450px;
+        animation-delay: 1.5s;
+      }
+      .light-6 {
+        left: 100px;
+        animation-delay: 3s;
+      }
+      .light-7 {
+        left: 900px;
+        animation-delay: 2s;
+      }
+      .light-8 {
+        left: 600px;
+        animation-delay: 3.5s;
+      }
+      .light-9 {
+        left: 700px;
+        animation-delay: 2s;
+      }
+      .light-10 {
+        left: 950px;
+        animation-delay: 3.5s;
+      }
+      .light-11 {
+        left: 750px;
+        animation-delay: 3s;
+      }
+      .light-12 {
+        left: 850px;
+        animation-delay: 0.5s;
+      }
+
+      @keyframes light-ans {
+        0% {
+          opacity: 0;
+          transform: translateY(0px);
+        }
+        25% {
+          opacity: 1;
+          transform: translateY(-50px) translateX(-20px);
+        }
+        50% {
+          opacity: 1;
+          transform: translateY(-150px) translateX(20px);
+          filter: blur(2px);
+        }
+        75% {
+          transform: translateY(-200px) translateX(-20px);
+          filter: blur(2px);
+        }
+        100% {
+          transform: translateY(-300px);
+          opacity: 0;
+          filter: blur(10px);
+        }
+      }
+
+      @keyframes light-ans-background {
+        0% {
+          opacity: 0;
+          transform: translateY(0) translateX(0);
+        }
+        25% {
+          opacity: 1;
+          transform: translateY(-100px) translateX(10px);
+        }
+        50% {
+          transform: translateY(-200px) translateX(-10px);
+        }
+        75% {
+          transform: translateY(-400px) translateX(15px);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(-600px) translateX(-5px);
+        }
+      }
       .flower-btn {
         padding: 12px 24px;
         font-size: 16px;
@@ -226,9 +395,29 @@
 
         <div class="flower_leaf flower_leaf-1"></div>
         <div class="flower_leaf flower_leaf-2"></div>
+
+        <div class="flower_light flower_light-1"></div>
+        <div class="flower_light flower_light-2"></div>
+        <div class="flower_light flower_light-3"></div>
+        <div class="flower_light flower_light-4"></div>
+        <div class="flower_light flower_light-5"></div>
+        <div class="flower_light flower_light-6"></div>
+        <div class="flower_light flower_light-7"></div>
+        <div class="flower_light flower_light-8"></div>
       </div>
     </div>
-
+    <div class="light light-1"></div>
+    <div class="light light-2"></div>
+    <div class="light light-3"></div>
+    <div class="light light-4"></div>
+    <div class="light light-5"></div>
+    <div class="light light-6"></div>
+    <div class="light light-7"></div>
+    <div class="light light-8"></div>
+    <div class="light light-9"></div>
+    <div class="light light-10"></div>
+    <div class="light light-11"></div>
+    <div class="light light-12"></div>
     <button class="flower-btn">CLICK AQUÍ ❤️</button>
 
     <script>

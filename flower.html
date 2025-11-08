@@ -42,19 +42,23 @@
         color: #fff;
         font-family: "Poppins", sans-serif;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 15px;
       }
 
       .flower_wrapper {
         position: absolute;
+        top: 700px;
         left: 50%;
-        bottom: 10px;
+        bottom: 20px;
         transform: translateX(-50%);
         z-index: 5;
       }
 
       .flower_stem {
+        position: absolute;
+        top: -400px;
         width: 20px;
+        transform: translateX(-50%);
         left: 50%;
         height: 390px;
         background-image: var(--line-color);
@@ -63,7 +67,7 @@
 
       .flower_center {
         position: absolute;
-        top: -80px;
+        top: -460px;
         left: 50%;
         transform: translateX(-50%);
         width: 140px;
@@ -78,11 +82,11 @@
 
       .flower_petal {
         position: absolute;
-        width: 80px;
-        height: 140px;
+        width: 98px;
+        height: 150px;
         background: var(--petal-color);
         clip-path: ellipse(35% 50% at 50% 50%);
-        top: -40%;
+        top: -2850%;
         left: 50%;
         transform-origin: center bottom;
         opacity: 0;
